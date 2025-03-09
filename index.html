@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Basket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico" type="image/x-icon">-->
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="biglogo.png" alt="logo"></div>
+            
+            <div class="search">
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Search for Product....">
+                    <button class="search-btn"><a><i class="fa-solid fa-magnifying-glass"></i></a></button> <!--search -->
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="login">
+                        <a href="login.html" class="btn btn-outline-primary">
+                            <i class="fa-regular fa-circle-user"></i> Login
+                        </a>
+                    </div>
+            
+             
+             <div class="location">
+               <!-- <button><a href="location.html"><i class="fa-solid fa-location-dot"></i></a>Select location</button>!-->
+                <!-- Select Location Button -->
+   
+    <div class="location">
+        <button class="btn btn-outline-secondary" onclick="showPopup()">
+            <i class="fa-solid fa-location-dot"></i> Select Location
+        </button>
+    </div>
+
+    <!-- Pop-up Message -->
+    <div id="popupMessage" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h4>Select a location for <span style="color: red;">delivery</span></h4>
+        <p>Choose your address location to see product availability and delivery options</p>
+        <input type="text" placeholder="Search for area or street name">
+    </div>
+            </div>
+            <div class="cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></div>
+           
+            <div class="profile"><i class="fa-solid fa-circle-user"></i></i></div>
+            
+        </div>
+        
+    </header>
+    <div class="category-buttons">
+        <a href="egg.html"><button class="category-btn">Eggs, Meat and Fish</button></a>
+       
+        <a href="https://www.tataneu.com/neupass?nc=b-cp-hp-sec3&b_t=cp_hp_sec3&b_camp=hp_topstrip_m_250923_02png&t_from_ban=7897261&t_pos=2&t_ch=desktop"><button class="category-btn neu-pass">NEUPASS</button></a>
+        <a href="ayurveda.html">  <button class="category-btn">Ayurveda</button></a>
+       <a href="buymore.html"><button class="category-btn">Buy More Save More</button></a>
+       <a href="deal.html"> <button class="category-btn">Deals of the Week</button></a>
+       <a href="combo.html"> <button class="category-btn">Combo Store</button></a>
+    </div>
+
+
+    <!-- Product Cards Section -->
+    <section class="container mt-4">
+        <div class="row">
+            <h4>My Smart Basket</h4>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="veg1.webp" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">fresho! Capsicum </h5>
+                        <p class="card-text">Under ₹89</p>
+                        
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="vag2.webp" class="card-img-top" alt="Handbag">
+                    <div class="card-body">
+                        <h5 class="card-title">fresho! Carrot-Orange</h5>
+                        <p class="card-text">Under ₹56</p>
+                       
+                      
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="vag3.webp" class="card-img-top" alt="Smartphone">
+                    <div class="card-body">
+                        <h5 class="card-title">fresho!Cauliflower</h5>
+                        <p class="card-text">Under ₹29</p>
+                        
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"> 
+                <div class="card">
+                    <img src="vag4.webp" class="card-img-top" alt="Earphones">
+                    <div class="card-body">
+                        <h5 class="card-title">fresho!Coriander Leaves,</h5>
+                        <p class="card-text">Under ₹19</p>
+                       
+                        
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <section class="container mt-4">
+        <div class="row">
+            <h4>Coffee Lovers</h4>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="co1.webp" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Vietnamese cold Coffee</h5>
+                        <p class="card-text">Under ₹189</p>
+                        <h6>356ml</h6>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="c2.webp" class="card-img-top" alt="Handbag">
+                    <div class="card-body">
+                        <h5 class="card-title">Spanish Coffee</h5>
+                        <p class="card-text">Under ₹156</p>
+                        <h6>200ml</h6>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="c3.webp" class="card-img-top" alt="Smartphone">
+                    <div class="card-body">
+                        <h5 class="card-title">Americano</h5>
+                        <p class="card-text">Under ₹129</p>
+                        <h6>250ml</h6>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="c4.webp" class="card-img-top" alt="Earphones">
+                    <div class="card-body">
+                        <h5 class="card-title">Hazelnut Cold Coffee</h5>
+                        <p class="card-text">Under ₹189</p>
+                        <h6>150ml</h6>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="container mt-4">
+        <div class="row">
+            <h4>Get Your Home Needs</h4>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="el1.webp" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title"> USB Cable - Black</h5>
+                        <p class="card-text">Under ₹289</p>
+                        
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="el2.webp" class="card-img-top" alt="Handbag">
+                    <div class="card-body">
+                        <h5 class="card-title">Micro USB Cable - Black</h5>
+                        <p class="card-text">Under ₹356</p>
+                      
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="el4.webp" class="card-img-top" alt="Smartphone">
+                    <div class="card-body">
+                        <h5 class="card-title">Super Compact Powerbank</h5>
+                        <p class="card-text">Under ₹1029</p>
+                      
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="e5.webp" class="card-img-top" alt="Earphones">
+                    <div class="card-body">
+                        <h5 class="card-title">boAt 10000mAh Power Bank</h5>
+                        <p class="card-text">Under ₹1189</p>
+                     
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</section>
+<section class="container mt-4">
+    <div class="row">
+        <h4>Wholesome Meals</h4>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="MIL1.webp" class="card-img-top" alt="Shoes">
+                <div class="card-body">
+                    <h5 class="card-title"> Paneer Makhani & Naan</h5>
+                    <p class="card-text">Under ₹229</p>
+                    
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="MIL2.webp" class="card-img-top" alt="Handbag">
+                <div class="card-body">
+                    <h5 class="card-title">Wheat Chapati - Pack of 3</h5>
+                    <p class="card-text">Under ₹56</p>
+                  
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="MIL4.webp" class="card-img-top" alt="Smartphone">
+                <div class="card-body">
+                    <h5 class="card-title">Paneer Tikka Masala</h5>
+                    <p class="card-text">Under ₹329</p>
+                  
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="MIL5.webp" class="card-img-top" alt="Earphones">
+                <div class="card-body">
+                    <h5 class="card-title">Butter Chicken & Naan</h5>
+                    <p class="card-text">Under ₹689</p>
+                 
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+</section>
+      <!-- Hero Image Carousel -->
+     <!-- Hero Image Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="hero1.webp" class="d-block w-100" alt="Hero Image 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="hero2.webp" class="d-block w-100" alt="Hero Image 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="hero3.webp" class="d-block w-100" alt="Hero Image 3">
+            </div>
+        </div>
+        <!-- Previous Button -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <!-- Next Button -->
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <div class="para">
+        <h5><b>bigbasket – online grocery store</b></h5></div>
+        <div class="per">
+            <p>Did you ever imagine that the freshest of fruits and vegetables, top-quality pulses and food grains, dairy products, 
+                and hundreds of branded items could be handpicked and delivered to your home, all at the click of a button? In today's fast-paced world, bigbasket.com, India's pioneering online grocery store, continues to bring a staggering array of over 40,000 products from more than 1,000 brands to the doorsteps of over 10 million satisfied customers. From essential household cleaning products to the latest beauty and makeup trends, bigbasket remains your one-stop shop for daily needs.
+                In these times, we've eliminated the stress associated with shopping for daily essentials. You can now effortlessly order all your household products and groceries online. 
+                Plus, the added convenience of finding all your requirements at a single source, coupled with substantial savings, demonstrates that bigbasket, India's largest online supermarket, has transformed the way we shop for groceries. Online grocery shopping has become second nature. And when it comes to freshness, whether it's fruits and vegetables or dairy and meat, we've got you covered! Easily obtain fresh eggs, meat, fish, and more with just a few clicks.
+            We now serve 300+ cities and towns across India and ensure swift delivery times, guaranteeing that all your groceries, snacks and branded foods reach you on time.
+            Slotted Delivery: Choose the most convenient delivery slot to receive your groceries, ranging from early morning delivery for early birds to late-night delivery for those on the night shift. bigbasket caters to every schedule.
+            Instant delivery from bbnow: In response to the ever-increasing demand for convenience, bbnow by bigbasket offers lightning-fast grocery delivery, ensuring that your essentials are at your doorstep within 15-30 minutes. Our quick delivery service has revolutionized the way you shop for groceries. Choose from 5000+ grocery essentials. bbnow is available only in select cities.
+             Whether it's a last-minute dinner party or you simply need something urgently, we've got you covered. This service exemplifies our commitment to providing you with not just the widest range of products but also the fastest and most efficient shopping experience, making bigbasket.com the go-to destination for all your immediate grocery needs.
+            </p>
+        </div>
+    
+
+
+    <footer>
+         <div class="foot-panel2">
+             <ul>
+                 <p>ABOUT</p>
+                 <a href="#">Contact Us</a>
+                 <a href="#">About Us</a>
+                 <a href="#">Careers</a>
+                 <a href="#">Big Basket</a>
+                 <a href="#">Press</a>
+                 <a href="#">Product Information</a>
+             </ul>
+             <ul>
+                <p>GROUP COMPANIES</p>
+                <a href="#">Big Basket</a>
+                <a href="#">bilkit</a>
+                 <a href="#">Zepto</a>
+             </ul>
+   
+             <ul>
+                 <p href="#">HELP</p>
+                 <a href="#">Payments</a>
+                 <a href="#">CONSUMER support</a>
+                 <a href="#">Cancellation & Returns</a>
+                 <a href="#">FAQ</a>
+             </ul>
+   
+             <ul>
+                 <p>CONSUMER POLICY</p>
+                 <a href="#">Cancellation & Returns</a>
+                 <a href="#">Trems Of Use</a>
+                 <a href="#">Security</a>
+                 <a href="#">Privacy</a>
+                 <a href="#">Sitemap</a>
+                 <a href="#">Grievance Redressal</a>
+                 <a href="#">ERP Compliance</a>
+             </ul>
+
+            </div>
+            <div class="footer-content">
+                <img src="biglogo.png" alt="bigbasket Logo" class="footer-logo">
+                
+        
+                <div class="app-links">
+                    <a href="#"><img src="gooleplay.webp" alt="Google Play"></a>
+                   
+                </div>
+        
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+          <div class="space"><h6>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</h6>
+          <h4><b>Cities We Serve</b></h4>
+          <p>Abohar
+            |
+            Abu Road
+            |
+            Achampet
+            |
+            Achrol
+            |
+            Adampur
+            |
+            Addanki
+            |
+            Addateegala
+            |
+            Adilabad
+            |
+            Adimali
+            |
+            Adoni
+            |
+            Adoor
+            |
+            Afzalpur
+            |
+            Agali
+            |
+            AGARTALA
+            |
+            Agra
+            |
+            Ahmedabad-Gandhinagar
+            |
+            Aizawl
+            |
+            Ajeetgarh
+            |
+            Ajmer
+            |
+            Ajnala
+            |
+            Akaloor
+            |
+            Akbarpur
+            |
+            Akbarpur-UP
+            |
+            Aklera
+            |
+            Akola
+            |
+            Alair
+            |
+            Alakode
+            |
+            Aland
+            |
+            Alappuzha
+            |
+            Aliganj
+            |
+            Aligarh
+            |
+            Aligarh District
+            |
+            ALIPURDUAR
+            |
+            Alirajpur
+            |
+            Allagadda
+            |
+            Allahabad
+            |
+            Alleppey
+            |
+            Almora
+            |
+            ALNAVAR
+            |
+            Alote
+            |
+            Bandikui
+            |
+            Bangalore
+            |</p></div>
+            <h6>---------------------------------------------------------------------------------------------------------------</h6>
+            <h5><b>Popular Brand</b></h5>
+            <div class="brands-section">
+            <h2>Popular Brands</h2>
+            <ul class="brands-list">
+                <li>Amul</li>
+                <li>Red Bull</li>
+                <li>Yummiez</li>
+                <li>Britannia</li>
+                <li>Haldiram's</li>
+                <li>Nescafe</li>
+                <li>Elite Cake</li>
+                <li>Yera</li>
+                <li>Wow! Momo</li>
+                <li>Ferrero</li>
+                <li>MTR</li>
+                <li>PediaSure</li>
+                <li>Yakult</li>
+                <li>Fortune</li>
+                <li>Lay's</li>
+            </ul>
+        </div><br><br>
+
+
+        <div class="copy"></div>
+        <p>&copy; 2025 Big Basket Clone | All rights reserved.</p>
+      </div>
+        </footer>
+    <script src="script.js"></script>
+   
+</body>
+</html> 
+
+
+
+
