@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        h2 {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border: none;
+            border-bottom: 1px solid #eee;
+            transition: background 0.3s ease;
+        }
+        .list-group-item:hover {
+            background: #f8f9fa;
+        }
+        .btn {
+            margin: 0.5rem;
+            transition: transform 0.2s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .modal-content {
+            border-radius: 10px;
+        }
+        .modal-header {
+            background: #27a35b;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        .modal-title {
+            font-weight: bold;
+        }
+        .modal-body {
+            padding: 1.5rem;
+        }
+        .modal-footer {
+            border-top: none;
+        }
+        #total-price {
+            font-size: 1.5rem;
+            color: #509368;
+        }
+        .fa-shopping-cart {
+            margin-right: 10px;
+        }
+        
+       
+        #scanner-image {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    z-index: 1050; /* Ensures it appears above other elements */
+}
+
+
+        .receipt-logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="biglogo.png" alt="logo"></div>
+            
+            <div class="search">
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Search for Coffee & More">
+                    <button class="search-btn"><a><i class="fa-solid fa-magnifying-glass"></i></a></button> <!--search -->
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="login">
+                        <a href="login.html" class="btn btn-outline-primary">
+                            <i class="fa-regular fa-circle-user"></i> Login
+                        </a>
+                    </div>
+            
+             
+             <div class="location">
+               <!-- <button><a href="location.html"><i class="fa-solid fa-location-dot"></i></a>Select location</button>!-->
+                <!-- Select Location Button -->
+   
+    <div class="location">
+        <button class="btn btn-outline-secondary" onclick="showPopup()">
+            <i class="fa-solid fa-location-dot"></i> Select Location
+        </button>
+    </div>
+
+    <!-- Pop-up Message -->
+    <div id="popupMessage" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h4>Select a location for <span style="color: red;">delivery</span></h4>
+        <p>Choose your address location to see product availability and delivery options</p>
+        <input type="text" placeholder="Search for area or street name">
+    </div>
+            </div>
+            <div class="cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></div>
+           
+            <div class="profile"><i class="fa-solid fa-circle-user"></i></i></div>
+            
+        </div>
+        
+    </header>
+    <div class="category-buttons">
+        <a href="egg.html"><button class="category-btn">Eggs, Meat and Fish</button></a>
+       
+        <a href="https://www.tataneu.com/neupass?nc=b-cp-hp-sec3&b_t=cp_hp_sec3&b_camp=hp_topstrip_m_250923_02png&t_from_ban=7897261&t_pos=2&t_ch=desktop"><button class="category-btn neu-pass">NEUPASS</button></a>
+        <a href="ayurveda.html">  <button class="category-btn">Ayurveda</button></a>
+       <a href="buymore.html"><button class="category-btn">Buy More Save More</button></a>
+       <a href="deal.html"> <button class="category-btn">Deals of the Week</button></a>
+       <a href="combo.html"> <button class="category-btn">Combo Store</button></a>
+    </div>
+
+    <div class="container mt-5">
+        <h2><i class="fas fa-shopping-cart"></i>Shopping Cart</h2>
+        <ul id="cart-items" class="list-group mb-3"></ul>
+        <p id="total-price" class="fw-bold">Total: ₹0.00</p>
+        
+        <button id="clear-cart" class="btn btn-danger"><i class="fas fa-trash"></i> Clear Cart</button>
+        <button id="checkout" class="btn btn-success"><i class="fas fa-credit-card"></i> Buy Now</button>
+        <button id="payment" class="btn btn-warning"><i class="fas fa-qrcode"></i> Payment</button>
+        <button id="continue-shopping" class="btn btn-primary"><i class="fas fa-shopping-bag"></i> Continue Shopping</button>
+        
+    </div>
+
+    <!-- Scanner Image -->
+   
+    <div id="scanner-container" class="text-center">
+        <img id="scanner-image" src="scanner.jpeg" alt="Scanner Image">
+    </div>
+    
+    <!-- Bill Receipt Modal -->
+    <div class="modal fade" id="billReceiptModal" tabindex="-1" aria-labelledby="billReceiptModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="billReceiptModalLabel"><i class="fas fa-receipt"></i> Big Basket</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img src="biglogo.png" alt="BigBasket Logo" class="receipt-logo">
+                    </div>
+                    <p id="receipt-time" class="text-center"></p>
+                    <ul id="receipt-items" class="list-group mb-3"></ul>
+                    <p id="receipt-total" class="fw-bold">Total: ₹0.00</p>
+                </div>
+                <div class="modal-footer">
+                   
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-qrcode"></i> GO TO Payment</button>
+                    <button type="button" class="btn btn-primary" onclick="downloadReceipt()"><i class="fas fa-download"></i> Download Receipt</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-panel2">
+            <ul>
+                <p>ABOUT</p>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Big Basket</a>
+                <a href="#">Press</a>
+                <a href="#">Product Information</a>
+            </ul>
+            <ul>
+               <p>GROUP COMPANIES</p>
+               <a href="#">Big Basket</a>
+               <a href="#">bilkit</a>
+                <a href="#">Zepto</a>
+            </ul>
+  
+            <ul>
+                <p href="#">HELP</p>
+                <a href="#">Payments</a>
+                <a href="#">CONSUMER support</a>
+                <a href="#">Cancellation & Returns</a>
+                <a href="#">FAQ</a>
+            </ul>
+  
+            <ul>
+                <p>CONSUMER POLICY</p>
+                <a href="#">Cancellation & Returns</a>
+                <a href="#">Trems Of Use</a>
+                <a href="#">Security</a>
+                <a href="#">Privacy</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Grievance Redressal</a>
+                <a href="#">ERP Compliance</a>
+            </ul>
+
+           </div> 
+           <div class="copy"></div>
+           <p>&copy; 2025 Big Basket Clone | All rights reserved.</p>
+         </div>
+   </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        
+    </script>
+    
+</body>
+</html> 

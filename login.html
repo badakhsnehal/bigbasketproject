@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Basket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico" type="image/x-icon">-->
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="biglogo.png" alt="logo"></div>
+            
+            <div class="search">
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Search for Coffee & More">
+                    <button class="search-btn"><a><i class="fa-solid fa-magnifying-glass"></i></a></button> <!--search -->
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="login">
+                        <a href="login.html" class="btn btn-outline-primary">
+                            <i class="fa-regular fa-circle-user"></i> Login
+                        </a>
+                    </div>
+            
+             
+             <div class="location">
+               <!-- <button><a href="location.html"><i class="fa-solid fa-location-dot"></i></a>Select location</button>!-->
+                <!-- Select Location Button -->
+   
+    <div class="location">
+        <button class="btn btn-outline-secondary" onclick="showPopup()">
+            <i class="fa-solid fa-location-dot"></i> Select Location
+        </button>
+    </div>
+
+    <!-- Pop-up Message -->
+    <div id="popupMessage" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h4>Select a location for <span style="color: red;">delivery</span></h4>
+        <p>Choose your address location to see product availability and delivery options</p>
+        <input type="text" placeholder="Search for area or street name">
+    </div>
+            </div>
+            <div class="cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></div>
+           
+            <div class="profile"><i class="fa-solid fa-circle-user"></i></i></div>
+            
+        </div>
+        
+    </header>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BigBasket Login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="card p-4 shadow-lg" style="width: 400px; height: 400px;">
+                <h3 class="text-center mb-4">Login to BigBasket</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Login</button>
+                    
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="foot-panel2">
+                <ul>
+                    <p>ABOUT</p>
+                    <a href="#">Contact Us</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Big Basket</a>
+                    <a href="#">Press</a>
+                    <a href="#">Product Information</a>
+                </ul>
+                <ul>
+                   <p>GROUP COMPANIES</p>
+                   <a href="#">Big Basket</a>
+                   <a href="#">bilkit</a>
+                    <a href="#">Zepto</a>
+                </ul>
+      
+                <ul>
+                    <p href="#">HELP</p>
+                    <a href="#">Payments</a>
+                    <a href="#">CONSUMER support</a>
+                    <a href="#">Cancellation & Returns</a>
+                    <a href="#">FAQ</a>
+                </ul>
+      
+                <ul>
+                    <p>CONSUMER POLICY</p>
+                    <a href="#">Cancellation & Returns</a>
+                    <a href="#">Trems Of Use</a>
+                    <a href="#">Security</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Sitemap</a>
+                    <a href="#">Grievance Redressal</a>
+                    <a href="#">ERP Compliance</a>
+                </ul>
+   
+               </div>
+               <div class="copy"></div>
+               <p>&copy; 2025 Big Basket Clone | All rights reserved.</p>
+             </div>
+       </footer>
+       <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
+    
+

@@ -1,0 +1,662 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #0000;
+}
+
+/* :root {
+  --primary-color: blue;
+} */
+
+.container {
+  padding: 0 8px;
+}
+
+/* header */
+header {
+  background-color: var(--primary-color);
+  height: 56px;
+}
+header .nav-container {
+  display: flex;
+   justify-content: space-between; 
+  align-items: center;
+  height: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+}
+header .nav-container .logo {
+  display: flex;
+  min-width: 137px;
+  width: 100px;
+  justify-content: flex-end;
+}
+header .nav-container .logo img {
+  width: 75px;
+}
+
+header .search {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+header .search .search-container {
+  width: 650px;
+  height: 36px;
+  background-color: black;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+  display: flex;
+}
+header .search .search-container input {
+  width: calc(100% - 32px);
+  padding: 16px;
+  outline: none;
+  border: none;
+}
+
+header .nav-container .logo img {
+  width: 150px;
+  display: flex;
+}
+
+header .search .search-container button {
+  width: 36px;
+  height: 100%;
+  padding: 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+}
+
+header .login {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+header .login button {
+  /* width: px; */
+  padding: 5px 40px;
+  font-size: 16px;
+  font-weight: 600;
+
+  border: white;
+  background-color: #000;
+  
+  color: white 
+}
+header.location button
+{
+ 
+  background-color: #878787;
+  color: #000;
+
+
+}
+
+
+
+i.fa-solid.fa-shop {
+  margin-right: 5px;
+}
+
+.profile
+{
+height: 20%;
+width: 10px;
+display: flex;
+height: 50%;
+display: flex;
+align-items: center;
+margin: 0 10px;
+
+}
+
+header .cart {
+  height: 150%;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  color: #000;
+}
+
+header .cart svg {
+  margin-right: 8px;
+}
+
+/* section 1 */
+.section-1 {
+  width: 100%;
+  height: 112px;
+  background-color: white;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+}
+.section-1-container {
+  width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-1-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.section-1-item img {
+  width: 64px;
+  height: 64px;
+}
+
+/* section 2 */
+.section-2-container {
+  margin-top: 16px;
+  height: 280px;
+  background-image: url("https://rukminim1.flixcart.com/fk-p-flap/3376/560/image/0735712fe84c602d.jpg?q=50");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* section 3 */
+.section-3-container {
+  margin-top: 8px;
+  height: 125px;
+  background-image: url("https://rukminim1.flixcart.com/fk-p-flap/2848/246/image/d56a3ed6d200038a.jpg?q=50");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/* footer */
+footer {
+  margin-top: 26px;
+  background-color:rgb(10, 10, 10);
+  padding: 25px;
+  text-align: center;
+  font-size: 14px;
+  color:white;
+}
+
+.card {
+  width: 250px; /* Set a fixed width */
+  height: 350px; /* Set a fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+  border-bottom: 1px solid #eee;
+}
+
+.card-body {
+  height: 150px; /* Fixed height for text section */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  background: #f8f9fa;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.card-button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card-button:hover {
+  background: #0056b3;
+}
+
+i.fa-solid.fa-user {
+  margin-right: 5px;
+}
+
+/* Big basket Footer Styling */
+
+footer {
+  background-color:black;
+  color:whitesmoke;
+  font-family: Arial, sans-serif;
+  padding: 40px 10%;
+}
+
+
+/* Back to Top Section */
+.foot-panel1 {
+  background-color: #000205;
+  text-align: center;
+  border: #000205;
+  padding: 10px;
+}
+
+.foot-panel1 a {
+  color:whitesmoke;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.foot-panel1 a:hover {
+  text-decoration: underline;
+}
+
+/* Main Footer Links */
+.foot-panel2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.foot-panel2 div {
+  flex: 1;
+  margin: 10px;
+}
+
+.foot-panel2 p {
+  font-size: 16px;
+  font-weight: bold;
+  borderk:whitesmoke ;
+  margin-bottom: 10px;
+}
+
+.foot-panel2 a {
+  display: block;
+  font-size: 14px;
+  color:whitesmoke;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.foot-panel2 a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Information */
+.contact-info {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Bottom Panel */
+.foot-panel3 {
+  background-color: #0f151b;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  color: #ddd;
+}
+
+.foot-panel3 .pages a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ddd;
+}
+
+.foot-panel3 .pages a:hover {
+  text-decoration: underline;
+}
+
+.foot-panel3 .copyright {
+  margin-top: 5px;
+}
+
+
+/* Legal Section */
+.legal {
+  text-align: center;
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+.legal a {
+  color: #bbb;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.legal a:hover {
+  text-decoration: underline;
+}
+
+.fa-ellipsis-vertical:before {
+  content: "\f142";
+  margin-left: 20px;
+}
+
+i.fa-regular.fa-circle-user {
+  margin-right: 4px;
+}
+.copy{
+  background-color:#878787;
+  
+}
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1cm;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #ddd;
+}
+
+.category-btn {
+  background-color:#bbb;
+  color:black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+  
+}
+
+.category-btn:hover {
+  background-color: white;
+}
+
+.neu-pass {
+  background-color:purple;
+}
+
+.neu-pass:hover {
+  background-color: whitesmoke;
+}
+
+
+* Button Styling */
+        .location button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Pop-up Styling */
+        .popup {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right:0%;
+            width: 100%;
+            transform: translateX(-50%);
+            background-color: #a4a394;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            text-align: center;
+            z-index: 1000;
+            border: 1px solid #ccc;
+        }
+
+        .popup h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .popup p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .popup input {
+            width: 90%;
+            padding: 8px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .popup .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            color: red;
+        }
+  /* Quantity Selector Styles */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.quantity-selector label {
+  font-size: 14px;
+  color: #555;
+}
+
+.quantity-selector input {
+  width: 80px;
+  padding: 5px;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.quantity-selector input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Hero Carousel Container */
+#heroCarousel {
+  margin: 50px 0; /* Adds space above and below the carousel */
+  border-radius: 20px; /* Rounded corners for the carousel */
+  overflow: hidden; /* Ensures the images don't overflow the rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+/* Carousel Images */
+.carousel-item img {
+  width: 25%; /* Ensures the image takes the full width of the container */
+  height: 350px; /* Fixed height for the carousel images */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+
+/* Carousel Controls (Previous and Next Buttons) */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Width of the control buttons */
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  
+  opacity: 0.8; /* Slightly transparent by default */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1; /* Fully visible on hover */
+}
+
+/* Carousel Control Icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Makes the arrows white */
+  width: 30px; /* Size of the icons */
+  height: 30px; /* Size of the icons */
+}
+
+/* Carousel Indicators (Dots at the Bottom) */
+.carousel-indicators {
+  bottom: 10px; /* Positions the indicators at the bottom */
+}
+
+.carousel-indicators button {
+  width: 10px; /* Size of the indicator dots */
+  height: 10px; /* Size of the indicator dots */
+  border-radius: 50%; /* Makes the dots circular */
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  border: none; /* Removes the default border */
+  margin: 0 5px; /* Adds space between the dots */
+}
+
+.carousel-indicators .active {
+  background-color: #fff; /* Fully white for the active dot */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .carousel-item img {
+      height: 300px; /* Smaller height for smaller screens */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+      width: 10%; /* Larger controls for easier tapping on mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+      height: 200px; /* Even smaller height for very small screens */
+  }
+}
+.brands-section {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+}
+.brands-section h2 {
+  text-align: center;
+}
+.brands-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.brands-list li {
+  margin: 10px 20px;
+  font-size: 18px;
+}
+
+/*last paragraph*/
+
+
+.para{
+  display: flex;
+  margin-left: 500px;
+}
+.per{
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+
+
+.footer-logo 
+{
+ background-color: white;
+ margin-left: 20px;
+  width: 150px;
+}
+
+.app-links img
+ {
+  background-color: white;
+  width: 150px;
+  margin: 10px;
+  margin-left: 40px;
+}
+
+.social-icons a
+ {
+  color: white;
+  font-size: 24px;
+  margin: 10px;
+  text-decoration: none;
+  margin-bottom: 100px;
+}
+
+.social-icons a:hover
+ {
+  color: #f39c12;
+}
